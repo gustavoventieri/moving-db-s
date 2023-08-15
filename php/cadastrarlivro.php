@@ -24,7 +24,7 @@ a {
         <br>
         <input type="submit" name = "btnenviar" value="Cadastrar"> &nbsp;&nbsp;
         <input type="reset" name = "limpar" value="limpar"> &nbsp;&nbsp;
-        <button><a href="menuautor.html">voltar</a></button>
+        <button><a href="menulivro.html">voltar</a></button>
     </fieldset>
 </form>
 

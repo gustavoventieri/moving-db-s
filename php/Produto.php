@@ -58,9 +58,28 @@ class Produto
         echo "Erro ao salvar o registro";
     }
 }
+    function exclusao() {
+        try {
+            $this-> conn = new Conectar();
+            $sql = $this->conn->prepare("delete from `produto` where id = ?");
+            @$sql -> bindParam(1, $this->getId(), PDO::PARAM_STR);
+            
+        if($sql->execute() == 1) {
+            return "Exclusão realizada com sucesso";
+        } else {
+            echo "Erro ao excluir";
+        }
+        $this -> conn = null;
+    }catch(PDOException $exc)
+    {
+        echo "Erro ao excluir" . $exc->getMessage();
+    }
+
+        }
+    }
 
 
-}
+
 
 
 ?>

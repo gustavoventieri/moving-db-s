@@ -89,6 +89,24 @@ class livro
     }
 }
 
+function exclusao() {
+    try {
+        $this-> conn = new Conectar();
+        $sql = $this->conn->prepare("delete from `livro` where Cod_livro = ?");
+        @$sql -> bindParam(1, $this->getCod_livro(), PDO::PARAM_STR);
+        
+    if($sql->execute() == 1) {
+        return "Exclusão realizada com sucesso";
+    } else {
+        echo "Erro ao excluir";
+    }
+    $this -> conn = null;
+}catch(PDOException $exc)
+{
+    echo "Erro ao excluir" . $exc->getMessage();
+}
+
+    }
 }
 
 

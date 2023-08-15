@@ -1,11 +1,11 @@
 <form name = "cliente" method="POST" action>
     <fieldset id="a">
         <legend><b>Dados do Produto</b></legend>
+        <p>Codigo do Livro</p><input type="text" name = "inputcl" size = "50" maxlength="50" placeholder="Digite o id">
         <p>Codigo do autor</p><input type="text" name = "inputcd" size = "50" maxlength="50" placeholder="Digite o id">
-        <p>Codigo livro</p><input type="text" name = "inputcl" size = "50" maxlength="50" placeholder="Digite o Nome">
-        <p>Editora</p> <input type="text" name = "inputedi" size = "50" maxlength="50" placeholder="Digite a quantidade">
-        <p>Data de lançamento</p> <input type="date" name = "inputdata" size = "50" maxlength="50" placeholder="Digite a quantidade">
 
+
+        
         
     </fieldset>
     <fieldset id="b">
@@ -23,18 +23,10 @@ extract($_POST, EXTR_OVERWRITE);
 if(isset($btnenviar)) {
     include_once 'autoria.php';
     $pro = new autoria();
-    $pro->setCod_autor($inputcd);
     $pro->setCod_livro($inputcl);
-    $pro->setDatalancamento($inputdata);
-    $pro->setEditora($inputedi);
+    $pro->setCod_autor($inputcd);
 
-    echo "<he><br><br>" . $pro->salvar() . "</h3>";
+    echo "<he><br><br>" . $pro->exclusao() . "</h3>";
 
 }
 ?>
-
-<br>
-<center>
-
-
-

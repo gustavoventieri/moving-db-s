@@ -14,6 +14,7 @@
         <br>
         <input type="submit" name = "btnenviar" value="Cadastrar"> &nbsp;&nbsp;
         <input type="reset" name = "limpar" value="limpar">
+        <button><a href="menuautor.html">voltar</a></button>
     </fieldset>
 </form>
 
@@ -36,6 +37,6 @@ if(isset($btnenviar)) {
 
 <br>
 <center>
-<button><a href="menuautor.html"></a></button>
+
 
 
